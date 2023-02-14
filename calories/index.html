@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="counter.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Calories</title>
+</head>
+<body class="bg-dark text-light">
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3 class="title-counter"></h3>
+        </div>
+        <div class="col text-end">
+            <h3 class="title-goal">Goal <span class="goal" contenteditable='true'>0</span></h3>
+            <span class="text-muted">daily intake </span><span class="intake">2500</span>
+        </div>
+    </div>
+</div>
+<div>
+    <table class="table table-dark table-striped entries align-middle">
+        <thead>
+        <tr>
+            <th scope="col">Count</th>
+            <th scope="col">Item</th>
+            <th scope="col">Calories</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <!--    <h6>-->
+    <section class="badging"><H6></H6>
+        <a href="#"><span class="badge rounded-pill bg-light text-dark" onclick="quick('Bier 33', 150)">Bier 33</span></a>
+        <a href="#"><span class="badge rounded-pill bg-primary" onclick="quick('Bier 50', 200)">Bier 50</span></a>
+        <a href="#"><span class="badge rounded-pill bg-secondary" onclick="quick('Boerenworst', 180)">Boerenworst</span></a>
+        <a href="#"><span class="badge rounded-pill bg-success" onclick="quick('Noodels', 360)">Noodels</span></a>
+        <a href="#"><span class="badge rounded-pill bg-danger" onclick="quick('Puree (lepel)', 50)">Puree</span></a>
+        <a href="#"><span class="badge rounded-pill bg-warning text-dark" onclick="quick('Pizza Aldi 1/8', 83)">Pizza Aldi 1/8</span></a>
+        <a href="#"><span class="badge rounded-pill bg-info text-dark" onclick="quick('Verse Pizza', 98)">Verse Pizza</span></a>
+        <a href="#"><span class="badge rounded-pill bg-light text-dark" onclick="quick('Cola', 150)">Cola</span></a>
+        <a href="#"><span class="badge rounded-pill bg-primary" onclick="quick('Worst 🐼', 100)">Worst 🐼</span></a>
+        <a href="#"><span class="badge rounded-pill bg-secondary" onclick="quick('Kroket', 60)">Kroket</span></a>
+        <a href="#"><span class="badge rounded-pill bg-success" onclick="quick('Kippenbout', 250)">Kippenbout</span></a>
+        <a href="#"><span class="badge rounded-pill bg-danger" onclick="quick('Mayo (lepel)', 50)">Mayo</span></a>
+        <a href="#"><span class="badge rounded-pill bg-warning text-dark" onclick="quick('Pistolet met beleg', 200)">Pistolet met beleg</span></a>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col">
+            <button id="clear" type="button" data-toggle="tooltip" data-placement="bottom" title="Clears Everything!!"
+                    class="btn btn-outline-danger btn-lg btn-block">
+                Clear
+            </button>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <button id="finish" type="button" data-toggle="tooltip" data-placement="bottom" title="Substract goal"
+                    class="btn btn-outline-primary btn-lg btn-block">
+                Finish day
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script src="counter.js?v=669"></script>
+<script type="module">
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
+</script>
+</body>
+</html>
