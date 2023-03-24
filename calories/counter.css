@@ -10,6 +10,10 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.badging {
+    text-align: center;
+}
+
 /*.badging {*/
 /*    !*font-size: 5em;*!*/
 /*    margin-top: 0;*/
